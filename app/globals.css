@@ -149,3 +149,42 @@ td.actions { white-space: nowrap; display: flex; gap: 0.4rem; align-items: cente
 @media (prefers-reduced-motion: no-preference) {
   .btn, .stat, .nav a { transition: border-color 0.15s, background-color 0.15s; }
 }
+
+/* Dog and cat artwork (see components/Pets.js) */
+:root {
+  --dog-fur: #dca56a;
+  --dog-ear: #8a5a33;
+  --muzzle: #fbf1e3;
+  --cat-fur: #93a7b1;
+  --cat-stripe: #5f7480;
+  --pet-ink: #1b2a33;
+}
+
+.pet-dog-fur { fill: var(--dog-fur); }
+.pet-dog-ear { fill: var(--dog-ear); }
+.pet-muzzle { fill: var(--muzzle); }
+.pet-cat-fur { fill: var(--cat-fur); }
+.pet-inner-ear { fill: #f2b8b5; }
+.pet-eye, .pet-nose { fill: var(--pet-ink); }
+.pet-shine { fill: #ffffff; }
+.pet-tongue { fill: #ee8a93; }
+.pet-cat-nose { fill: #e58e92; }
+.pet-ledge { fill: var(--spruce); }
+.pet-line, .pet-whisker, .pet-stripe { fill: none; stroke-linecap: round; stroke-linejoin: round; }
+.pet-line { stroke: var(--pet-ink); stroke-width: 2.4; }
+.pet-whisker { stroke: var(--pet-ink); stroke-width: 1.6; opacity: 0.6; }
+.pet-stripe { stroke: var(--cat-stripe); stroke-width: 3.2; }
+
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) auto; align-items: center; gap: 0.5rem 2.5rem; }
+.hero-art { width: min(19rem, 100%); height: auto; margin-top: 1.5rem; }
+
+.species { display: inline-flex; align-items: center; gap: 0.5rem; }
+.species svg { flex: none; }
+
+.empty { display: flex; align-items: center; gap: 0.7rem; }
+.empty-paw { flex: none; color: var(--chinook); }
+
+@media (max-width: 40rem) {
+  .hero { grid-template-columns: 1fr; }
+  .hero-art { width: 13rem; margin-top: 0; }
+}

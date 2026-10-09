@@ -4,6 +4,7 @@ import { one } from "@/lib/params";
 import { SPECIES, VACCINATION, ANIMAL_STATUS } from "@/lib/choices";
 import Badge from "@/components/Badge";
 import Empty from "@/components/Empty";
+import { SpeciesIcon } from "@/components/Pets";
 
 export const metadata = { title: "Animals | Calgary Paws & Whiskers" };
 
@@ -76,7 +77,7 @@ export default async function AnimalsPage({ searchParams }) {
               {rows.map((a) => (
                 <tr key={a.id}>
                   <td><a href={`/animals/${a.id}`}>{a.name}</a></td>
-                  <td>{a.species}</td>
+                  <td><span className="species"><SpeciesIcon species={a.species} />{a.species}</span></td>
                   <td>{a.breed || "—"}</td>
                   <td>{a.drop_off_date}</td>
                   <td><Badge value={a.vaccination_status} /></td>

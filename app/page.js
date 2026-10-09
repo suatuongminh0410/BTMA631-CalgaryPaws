@@ -1,5 +1,6 @@
 import { sql } from "@/lib/db";
 import Empty from "@/components/Empty";
+import { PetPair } from "@/components/Pets";
 
 export default async function Home() {
   const [c] = await sql`
@@ -23,11 +24,14 @@ export default async function Home() {
   return (
     <>
       <section className="hero">
-        <h1>Every animal, every foster, one place.</h1>
-        <p className="lead">
-          Track the dogs and cats at Calgary Paws &amp; Whiskers: when they arrived, whether their
-          vaccinations are current, who is fostering them, and their medical history.
-        </p>
+        <div className="hero-text">
+          <h1>Every animal, every foster, one place.</h1>
+          <p className="lead">
+            Track the dogs and cats at Calgary Paws &amp; Whiskers: when they arrived, whether their
+            vaccinations are current, who is fostering them, and their medical history.
+          </p>
+        </div>
+        <PetPair className="hero-art" />
       </section>
 
       <section className="stats" aria-label="Summary">

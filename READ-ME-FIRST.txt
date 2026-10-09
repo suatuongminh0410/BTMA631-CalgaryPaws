@@ -1,0 +1,15 @@
+Cute dogs and cats update for Calgary Paws & Whiskers
+
+5 files changed. Upload each one to the same folder in your GitHub repository (it replaces the old file):
+
+  components/Pets.js        NEW file
+  components/Empty.js       replaces the old one
+  app/page.js               replaces the old one
+  app/globals.css           replaces the old one
+  app/animals/page.js       replaces the old one
+
+Steps: on github.com open your repository, click into the folder (for example components), click Add file, then Upload files,
+drag the file in, and click Commit changes. Vercel rebuilds by itself within a minute or two.
+
+If anything looks wrong afterwards: in Vercel open Deployments, find the previous deployment that says Ready, open its menu
+and choose Promote to Production (or Instant Rollback). That puts the old site back immediately.
